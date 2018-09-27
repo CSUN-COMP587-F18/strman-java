@@ -172,23 +172,3 @@ ensureLeft("bar", "foo")
 ensureLeft("foobar", "FOO", false)
 // result => "foobar"
 ```
-
-## base64Decode
-
-Decodes data encoded with MIME base64
-
-```java
-import static strman.Strman.base64Decode
-base64Decode("c3RybWFu")
-// result => "strman"
-```
-
-## base64Encode
-
-Encodes data with MIME base64.
-
-```java
-import static strman.Strman.base64Encode
-base64Encode("strman")
-// result => "c3RybWFu"
-```
