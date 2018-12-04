@@ -1,0 +1,2527 @@
+<html xmlns:graph="graph" xmlns:results="results">
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <style type="text/css">
+    BODY,P,OL,TD,pre{font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000;}
+    .textArea {width:99%; height: 235px; padding:0.5%; resize: none; border:1px; border-style: solid; border-color: #CBCBCB; outline: none; overflow:auto;}
+
+    A:link {font-family: Arial, Helvetica, sans-serif;font-style: normal;color: #990000;text-decoration: none;}
+    A:active {font-family: Arial, Helvetica, sans-serif;font-style: normal;color: #990000;text-decoration: none;}
+    A:visited {font-family: Arial, Helvetica, sans-serif;font-style: normal;color: #999999;text-decoration: none;}
+    A:hover {font-family: Arial, Helvetica, sans-serif;font-style: normal;color: #990000;text-decoration: underline;}
+    A.gray_link:link {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_link:active {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_link:visited {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_link:hover {font-family: Arial;font-size: 12px;color: #666666;text-decoration: underline;}
+    A.red_link:link {font-family: Arial;font-size: 12px;color: #990000;text-decoration: none;}
+    A.red_link:active {font-family: Arial;font-size: 12px;color: #990000;text-decoration: none;}
+    A.red_link:visited {font-family: Arial;font-size: 12px;color: #990000;text-decoration: none;}
+    A.red_link:hover {font-family: Arial;font-size: 12px;color: #990000;text-decoration: underline;}
+    A.green_link:link {font-family: Arial;font-size: 12px;color: #008040;text-decoration: none;}
+    A.green_link:active {font-family: Arial;font-size: 12px;color: #008040;text-decoration: none;}
+    A.green_link:visited {font-family: Arial;font-size: 12px;color: #008040;text-decoration: none;}
+    A.green_link:hover {font-family: Arial;font-size: 12px;color: #008040;text-decoration: underline;}
+    A.black_link:link {font-family: Arial;font-size: 12px;color: #000000;text-decoration: none;}
+    A.black_link:active {font-family: Arial;font-size: 12px;color: #000000;text-decoration: none;}
+    A.black_link:visited {font-family: Arial;font-size: 12px;color: #000000;text-decoration: none;}
+    A.black_link:hover {font-family: Arial;font-size: 12px;color: #000000;text-decoration: underline;}
+
+    A.blue_link:link {font-family: Arial;font-size: 12px;color: #0093D2;text-decoration: none;}
+    A.blue_link:active {font-family: Arial;font-size: 12px;color: #0093D2;text-decoration: none;}
+    A.blue_link:visited {font-family: Arial;font-size: 12px;color: #0093D2;text-decoration: none;}
+    A.blue_link:hover {font-family: Arial;font-size: 12px;color: #0093D2;text-decoration: underline;}
+
+    A.gray_red_link:link {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_red_link:active {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_red_link:visited {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_red_link:hover {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    DIV.suite_details{background:#EDEDED;padding:8px}
+
+    DIV.test_comment{color:#666666;}
+
+    DIV.arr_right
+    {
+        position: relative;
+        left: +1px;
+        top: +3px;
+        height: 0px;
+        width: 0;
+        border-left: 5px solid #FFFFFF;
+        border-right: 5px solid transparent;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+    }
+    DIV.arr_down
+    {
+        position: relative;
+        left: -3px;
+        top: +5px;
+        height: 0px;
+        width: 0;
+        border-top: 5px solid #FFFFFF;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+       }
+
+    TABLE.main_header_top {
+         padding: 10px;
+         background: #333333;
+         border-spacing: 0px;
+    }
+
+    TABLE.main_header {
+         padding-top:2px;
+         padding-bottom:1px;
+         background: #006699;
+         text-align: center;
+    }
+
+    FONT.main_header {
+         font-size: 28px;
+         font-family: Arial, Helvetica, sans-serif;
+         color: #FFFFFF;
+    }
+
+    TABLE.main_header_small {
+         padding-top:1px;
+         padding-bottom:2px;
+         background: #006699;
+         text-align:center;
+    }
+
+    TABLE.header_separator {
+         padding-top:1px;
+         padding-bottom:2px;
+         background: #CCCCCC;
+         text-align:center;
+    }
+
+    FONT.main_header_small {
+         font-size: 12px;
+         font-family: Arial, Helvetica, sans-serif;
+         color: #FFFFFF;
+    }
+    
+    DIV.section_header { 
+         padding: 8px; 
+         color: #FFFFFF; 
+         font-size: 14px;
+         font-family: Arial, Helvetica, sans-serif;
+         background: #004877;
+    }
+
+    TABLE.section_header { 
+         padding: 8px; 
+         color: #FFFFFF; 
+         font-size: 14px;
+         font-family: Arial, Helvetica, sans-serif;
+         background: #004877;
+    }
+
+    DIV.header{ padding-top: 10px; font-size: 32px; FONT-FAMILY: Arial, sans-serif; COLOR:#000000 }
+    DIV.small_header{ padding-top: 5px; padding-bottom: 5px; font-size: 28px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000 }
+    FONT.title{font-size: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000 }
+    FONT.gray {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #999999;}    
+    FONT.gray2, FONT.gray_red {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #666666;}
+    FONT.white {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #FFFFFF;}
+    FONT.time {font-size: 11px;font-family: Arial, Helvetica, sans-serif;color: #000000;}
+    FONT.black {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000;}
+    FONT.red {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #990000;}
+    FONT.red2 {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #990000; text-decoration: underline;}
+    FONT.blue {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #427fb6;}
+    FONT.green {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #008040;}
+    FONT.orange {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #F69500;}
+    FONT.goldenrod {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #DAA520;}    
+    FONT.small {font-size: 3px;font-family: Arial, Helvetica, sans-serif;color: #cccccc;}
+    IMG.screenshot{float:left; margin-right: 20px; }
+    SELECT.cs_authors {font-family: Arial, Helvetica, sans-serif;font-size: 12px;}  
+    SELECT.ju_authors {font-family: Arial, Helvetica, sans-serif;font-size: 12px;}  
+    SPAN.toggle_button{width: 16px; padding-right: 2px; display: inline-block;cursor: pointer;} 
+    TD.associations{vertical-align: top;}
+    TD.collapse_controls{text-align:right;}
+    TD.cs_authors{font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000;border: 1px; bordercolor: #d9c8ac;}
+    TD.error{background-color:#F2C6C5}
+    TD.errorsingleborder{ padding:8px; background-color:#F2C6C5;}
+
+    TD.summary_cell { padding: 5px; padding-left: 20px; color: #000000; font-size: 13px; font-family: Arial, Helvetica, sans-serif; background: #EDEDED }
+    TD.summary_stats_cell { padding: 5px; padding-left: 20px; color: #000000; font-size: 14px; font-family: Arial, Helvetica, sans-serif; background: #FFFFFF }
+    TABLE.summary_stats_cell { border: 1px solid #000000 }
+
+    TD.section_header
+    {
+        padding: 0px;
+        color:#FFFFFF; 
+        background-color:#004877;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    TD.header_separator
+    {
+        padding: 0px;
+        color:#FFFFFF; 
+        background-color: #CCCCCC;
+    }
+
+    TD.testSuiteTree {padding-top:4px;padding-bottom:4px;}
+    TD.singleborder{ padding:8px;}
+    TD.right_separator{ border-right:1px #FFFFFF solid}
+    TD.left_separator{ border-left:1px #FFFFFF solid}
+    TABLE.header{background-color:#FFFFFF}
+    TABLE.singleborder{}
+    TABLE.doubleborder{}
+    TABLE.singleborder_blue{}
+    TABLE.singleborder_main{}
+    TD.fixed_width{width: 150px;}
+    TD.no_error{}
+    TD.suite_details{padding-top:2px; padding-bottom:2px }
+    UL.metrics {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000; list-style-type: none; margin: 0; padding-left:12px;}
+    UL.root {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000; list-style-type: none; margin: 0; padding-left:0px; margin-left:3px;}
+    UL {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000; list-style-type: none; margin: 0; padding-left:0px; margin-left:12px;}
+    LI.tree {padding-top:2px; padding-bottom:2px; font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000; list-style-type: none; margin: 0; padding-left: 0px;}
+
+    LI.root { 
+        margin: 0;
+        padding-left: 0px;
+        padding-top:8px;
+        padding-bottom:8px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        color: #000000; 
+        list-style-type: none;
+        
+            background-color: #CCCCCC; 
+        
+    }
+
+    TD.root {
+        padding-top:8px;
+        padding-bottom:8px;
+        
+            background-color: #CCCCCC; 
+         
+    }
+    TD.tree { padding-top:2px; padding-bottom:2px;}
+
+    PRE.tree { line-height: 16px; margin:0px; }
+
+    tr.alternated { background-color: #EDEDED }
+    tr.alternating:nth-child(even) { background-color: #EDEDED }
+    li.alternating:nth-child(even) { background-color: #EDEDED }
+
+    tr.errorsingleborder:nth-child(even) { background-color: #F2C6C5 }
+    tr.errorsingleborder:nth-child(odd)  { background-color: #F7D3D2 }
+    tr.no_errorsingleborder { }
+    
+    #foldheader{cursor:pointer;cursor:hand ;}
+    #cs_foldheader{cursor:pointer;cursor:hand ;}
+    #cr_foldheader{cursor:pointer;cursor:hand ;}
+    #metrics_foldheader{cursor:pointer;cursor:hand ;}
+    #exec_foldheader{cursor:pointer;cursor:hand ;}
+    #paramsHeader {word-break:break-all;overflow: auto; padding: 3px;}
+    </style><title>Jtest&nbsp;Report&nbsp;[2018-12-04T06:20:53-08:00]
+
+</title><script language="JavaScript">
+    var nwin;
+    function openWin (loc_to_open) {
+       if (!nwin || nwin.closed) {
+          nwin = window.open(loc_to_open,'');
+       } else {
+          nwin.location = loc_to_open;
+       }
+       nwin.focus();
+    }
+    function openDevReport (dev_rep_name) {
+       openWin(dev_rep_name);
+    }
+    </script><script language="JavaScript">
+    function sortBySeverity(urgent){
+    if(urgent != null)  {
+        sev=document.getElementById("cs_sevtrue");
+        sev_link=document.getElementById("cs_link_sevtrue");
+        sev_title=document.getElementById("cs_title_sevtrue");
+    } else {
+        sev=document.getElementById("cs_sev");
+        sev_link=document.getElementById("cs_link_sev");
+        sev_title=document.getElementById("cs_title_sev");
+    }
+    if(sev != null) sev.style.display='block';
+    if(sev_title != null) sev_title.style.display='block';
+    if(sev_link != null) {
+       sev_link.className="gray_red_link";
+    }
+    if(urgent != null)  {
+        cat=document.getElementById("cs_cattrue");
+        cat_link=document.getElementById("cs_link_cattrue");
+        cat_title=document.getElementById("cs_title_cattrue");
+    } else {
+        cat=document.getElementById("cs_cat");
+        cat_link=document.getElementById("cs_link_cat");
+        cat_title=document.getElementById("cs_title_cat");
+    }
+    if(cat != null) cat.style.display='none';
+    if(cat_title != null) cat_title.style.display='none';
+    if(cat_link != null) {
+       cat_link.className="blue_link";
+    }
+    }
+
+    function sortByCategory(urgent){
+    if(urgent != null)  {
+        sev=document.getElementById("cs_sevtrue");
+        sev_link=document.getElementById("cs_link_sevtrue");
+        sev_title=document.getElementById("cs_title_sevtrue");
+    } else {
+        sev=document.getElementById("cs_sev");
+        sev_link=document.getElementById("cs_link_sev");
+        sev_title=document.getElementById("cs_title_sev");
+    }
+    if(sev != null) sev.style.display='none';
+    if(sev_title != null) sev_title.style.display='none';
+    if(sev_link != null) { 
+        sev_link.className="blue_link";
+    }       
+    if(urgent != null)  {
+        cat=document.getElementById("cs_cattrue");
+        cat_link=document.getElementById("cs_link_cattrue");
+        cat_title=document.getElementById("cs_title_cattrue");
+    } else {
+        cat=document.getElementById("cs_cat");
+        cat_link=document.getElementById("cs_link_cat");
+        cat_title=document.getElementById("cs_title_cat");
+    }
+    if(cat != null) cat.style.display='block';
+    if(cat_title != null) cat_title.style.display='block';
+    if(cat_link != null) { 
+        cat_link.className="gray_red_link";
+    }
+    }
+    </script><script language="JavaScript">
+    var ns6=document.getElementById && !document.all
+    var ie4=document.all && navigator.userAgent.indexOf("Opera")==-1
+
+    function checkcontained(e)
+    {
+       cur=ns6 ? e.target : event.srcElement;
+
+       checkFor("foldinglist", "foldheader", cur);
+       checkFor("cs_foldinglist", "cs_foldheader", cur);
+       checkFor("cr_foldinglist", "cr_foldheader", cur);
+       checkFor("metrics_foldinglist", "metrics_foldheader", cur);
+       checkFor("exec_foldinglist", "exec_foldheader", cur);
+    }
+
+    function toggleDiv(divSectionId)
+    {
+        var divArrowId = divSectionId + "_arrow";
+        if (document.getElementById(divSectionId).style.display == "none") {
+            document.getElementById(divSectionId).style.display = "";
+            document.getElementById(divArrowId).className="arr_down";
+        } else {
+            document.getElementById(divSectionId).style.display = "none";
+            document.getElementById(divArrowId).className="arr_right";
+        }
+    }
+
+    function checkFor(foldinglist, foldheader, cur)
+    {
+        var iscontained=0;
+        i = 0;
+        if (cur.id==foldheader) {
+           iscontained=1;
+        } 
+        while (ns6 && cur.parentNode || (ie4 && cur.parentElement)) {
+             if (cur.id==foldheader||cur.id==foldinglist){
+                iscontained=(cur.id==foldheader)? 1 : 0;
+                break;
+             }
+             cur=ns6? cur.parentNode : cur.parentElement;
+        }
+
+        if (iscontained) {
+           var foldercontent=ns6? cur.nextSibling.nextSibling : cur['nextSibling'];
+           if (foldercontent.style.display=="none"){
+               foldercontent.style.display="";
+           } else {
+               foldercontent.style.display="none";
+           }
+        }
+    }
+    function expandCSDetails() {
+       expandCollapseAll("cs_foldinglist", true);
+    }
+
+    function collapseCSDetails() {
+       expandCollapseAll("cs_foldinglist", false);
+    }
+
+    function expandCRDetails() {
+    expandCollapseAll("cr_foldinglist", true);
+    }
+
+    function collapseCRDetails() {
+    expandCollapseAll("cr_foldinglist", false);
+    }
+
+    function expandMetricsDetails() {
+    expandCollapseAll("metrics_foldinglist", true);
+    }
+
+    function collapseMetricsDetails() {
+    expandCollapseAll("metrics_foldinglist", false);
+    }
+
+    function expandExecDetails() {
+       expandCollapseAll("exec_foldinglist", true);
+    }
+
+    function collapseExecDetails() {
+       expandCollapseAll("exec_foldinglist", false);
+    }
+
+    function expandCvgDetails() {
+       expandCollapseAll("cvg_foldinglist", true);
+    }
+
+    function collapseCvgDetails() {
+       expandCollapseAll("cvg_foldinglist", false);
+    }
+
+    function expandCollapseAll(foldinglistID, collapse)
+    {
+        if (document.getElementById && document.createElement) {
+            m = document.getElementById(foldinglistID).getElementsByTagName('ul');
+            var i;
+            for (i = 0; i < m.length; i++) {
+              if (collapse) {
+                 m[i].style.display='block';
+              } else {
+                 m[i].style.display='none';
+              }
+            }
+        }
+    }
+
+    
+    function expandDupViolaion(headerID, violationClassID)
+    {  
+        var violations = document.getElementsByClassName(violationClassID);
+        var m = document.getElementById(headerID).getElementsByTagName('td');
+        
+        if(violations.length > 0){
+            if (violations[0].style.display === '') {
+            
+                for (i=0; i < violations.length; i++){
+                    violations[i].style.display = 'none'; 
+                }            
+                for (i = 0; i < m.length; i++) {
+                    m[i].style.backgroundColor = "#FFFFFF";
+                }
+            }
+            else{
+                for (i=0; i < violations.length; i++){
+                    violations[i].style.display = ''; 
+                }
+                for (i = 0; i < m.length; i++) {
+                    m[i].style.backgroundColor = "#E0E0E0";
+                }        
+            }        
+        }
+    }
+    
+    
+    function expandFAViolaion(headerID, violationID, startIndex)
+    {
+        var violation = document.getElementById(violationID);
+        var m = document.getElementById(headerID).getElementsByTagName('td');
+        
+        if (violation.style.display === '') {
+            violation.style.display = 'none';
+            for (i = startIndex; i < m.length; i++) {
+                m[i].style.backgroundColor = "#FFFFFF";
+            }
+        }
+        else{
+            violation.style.display = '';
+            for (i = startIndex; i < m.length; i++) {
+                m[i].style.backgroundColor = "#E0E0E0";
+            }        
+        }
+    }
+
+    if (ie4||ns6) {
+       document.onclick=checkcontained;
+    }
+    </script></head>
+<body bgcolor="#FFFFFF" style="margin:0;padding:0">
+<table class="singleborder_main" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" class="main_header_top">
+<tr></tr>
+</table>
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" class="main_header">
+<tr>
+<td align="center" class="main_header"><font class="main_header">Parasoft&nbsp;Jtest&nbsp;Report</font></td>
+</tr>
+</table>
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" class="main_header_small">
+<tr>
+<td align="center" class="main_header_small"><font class="main_header_small">Jtest&nbsp;10.4.1.20181102</font></td>
+</tr>
+</table><br xmlns:textutil="textutil" xmlns:authors="authors"><table width="100%" style="padding-bottom:10px;padding-top:0px" cellspacing="0">
+<tr>
+<td align="center">
+<table width="100%" class="singleborder_blue" style="padding-left:25px;padding-right:25px;padding-bottom:25px;padding-top:5px" cellspacing="0" bgcolor="#FFFFFF">
+<tr>
+<td>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td colspan="2">
+<table width="100%" cellpadding="0" cellspacing="0" class="section_header">
+<tr>
+<td>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td class="section_header">Session Summary</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="summary_cell" width="50%">
+<table style="white-space: nowrap;" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="20%" class="summary_cell"><b>Build ID:</b></td>
+<td class="summary_cell">2018-12-04&nbsp;</td>
+</tr>
+<tr>
+<td class="summary_cell"><b>Test Configuration:</b></td>
+<td class="summary_cell">builtin://Recommended Rules&nbsp;</td>
+</tr>
+<tr>
+<td class="summary_cell"><b>Started:</b></td>
+<td class="summary_cell">2018-12-04T06:20:53-08:00</td>
+</tr>
+<tr>
+<td class="summary_cell"><b>Performed on:</b></td>
+<td class="summary_cell">DESKTOP-S74AR8O by LuanTa</td>
+</tr>
+<tr>
+<td class="summary_cell"><b>Session Tag:</b></td>
+<td class="summary_cell">${scontrol_branch}-win32_x86_64</td>
+</tr>
+<tr>
+<td class="summary_cell"><b>Project:</b></td>
+<td class="summary_cell">&nbsp;</td>
+</tr>
+</table>
+</td>
+<td class="summary_cell" width="50%" align="right" valign="top" style="padding-right:60px;"><br><table width="400px" class="summary_stats_cell" cellpadding="0" bgcolor="#FFFFFF" cellspacing="0">
+<tr>
+<td>
+<table width="100%" cellpadding="0" bgcolor="#FFFFFF" cellspacing="0">
+<tr>
+<td class="summary_stats_cell"><a xmlns:textutil="textutil" xmlns:authors="authors" class="blue_link" style="font-size: 14px" href="#cs"><b>Static Analysis</b></a></td>
+<td class="summary_stats_cell">Severity 1 Findings: 0</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><a xmlns:textutil="textutil" xmlns:authors="authors" name="cs"></a>&nbsp;
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" cellpadding="0" cellspacing="0" class="section_header">
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td class="section_header">Section Summary - Static Analysis</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" cellpadding="2" cellspacing="0">
+<tr>
+<td align="center"><img src="standard_summary_12-04-18_06-20-53.jpeg" alt="standard_summary_12-04-18_06-20-53.jpeg"></td>
+</tr>
+</table>&nbsp;
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" cellpadding="0" cellspacing="0" class="section_header" onclick="javascript:toggleDiv('cs_details_section')">
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0">
+<tr cols="2">
+<td class="section_header" valign="top">
+<div style="display:table-cell" class="arr_down" id="cs_details_section_arrow"><span style="zoom:1;"></span></div>
+</td>
+<td class="section_header">Details - Static Analysis</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div xmlns:textutil="textutil" id="cs_details_section">
+<table class="header" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="15%"></td>
+<td align="center">
+<div class="header">Static Analysis</div>
+</td>
+<td width="15%" align="right" valign="bottom"></td>
+</tr>
+</table><br><table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="80%">
+<table width="100%" class="singleborder" cellpadding="0" cellspacing="0">
+<tr>
+<td class="singleborder right_separator" width="40%" align="center" bgcolor="#CCCCCC"><b>Module</b>&nbsp;
+</td>
+<td class="singleborder  right_separator" align="center" bgcolor="#CCCCCC" colspan="3">&nbsp;<b>Findings</b>&nbsp;
+</td>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC" colspan="2">&nbsp;<b>Files</b></td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC" colspan="2">&nbsp;<b>Lines</b></td>
+</tr>
+<tr>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC"><span style="zoom:1;"></span></td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">suppressed</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">total</td>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC">per 10,000 lines</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">checked</td>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC">total</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">checked</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">total</td>
+</tr>
+<tr class="alternating">
+<td class="singleborder right_separator" align="left">&nbsp;strman</td>
+<td class="singleborder" align="center">&nbsp;0&nbsp;</td>
+<td class="singleborder" align="center">1&nbsp;</td>
+<td class="singleborder right_separator" align="center">1&nbsp;</td>
+<td class="singleborder" align="center">&nbsp;3&nbsp;</td>
+<td class="singleborder  right_separator" align="center">3&nbsp;</td>
+<td class="singleborder" align="center">&nbsp;5419&nbsp;</td>
+<td class="singleborder" align="center">5419&nbsp;</td>
+</tr>
+<tr>
+<td class="singleborder  right_separator" align="left" bgcolor="#CCCCCC">&nbsp;<b>Total</b> [0:00:00]
+
+</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">&nbsp;<b>0</b>&nbsp;
+</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">&nbsp;<b>1</b>&nbsp;
+</td>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC">&nbsp;<b>1</b>&nbsp;
+</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC"><b>3</b>&nbsp;
+</td>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC"><b>3</b>&nbsp;
+</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC"><b>5419</b>&nbsp;
+</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC"><b>5419</b>&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table class="header" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="30%">&nbsp;</td>
+<td align="center">
+<div class="small_header" id="cs_title_cat" style="display:block;">All Findings&nbsp;by Category</div>
+<div class="small_header" id="cs_title_sev" style="display:none;">All Findings&nbsp;by Severity</div>
+</td>
+<td align="right" width="30%"><a xmlns:authors="authors" id="cs_link_cat" class="blue_link" href="javascript:sortByCategory()">Category</a>&nbsp;
+|
+&nbsp;<a xmlns:authors="authors" id="cs_link_sev" class="blue_link" href="javascript:sortBySeverity()">Severity</a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table xmlns:authors="authors" width="100%" class="header_separator" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" class="header_separator"></td>
+</tr>
+</table><br xmlns:authors="authors"></td>
+</tr>
+<tr>
+<td align="left">
+<div id="cs_cat" style="display:block;">
+<table width="100%" class="doubleborder" cellpadding="0" cellspacing="0">
+<tr>
+<td class="tree">&nbsp;
+[<b>1</b>]
+&nbsp;&nbsp;<b>Numerical Errors</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.NUM.html&#34;)">(PB.NUM)</a>&nbsp;
+</td>
+</tr>
+<tr>
+<td class="tree_node">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Do not cast primitive data types to lower precision&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.NUM.CLP.html&#34;)">(PB.NUM.CLP-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align="left">
+<div id="cs_sev" style="display:none;">
+<table width="100%" class="doubleborder" cellpadding="0" cellspacing="0">
+<tr>
+<td class="tree">&nbsp;
+[<b>1</b>]
+&nbsp;&nbsp;<b>Severity&nbsp;2 - High</b></td>
+</tr>
+<tr>
+<td class="tree_node">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Do not cast primitive data types to lower precision&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.NUM.CLP.html&#34;)">(PB.NUM.CLP-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><table xmlns:authors="authors" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="20%"></td>
+<td width="60%" align="center">
+<div class="small_header">Findings by Author</div>
+</td>
+<td width="20%" align="right"><a class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+<table align="center" class="singleborder" width="100%" cellpadding="0" cellspacing="0">
+<tr bgcolor="#CCCCCC">
+<td class="singleborder right_separator" width="50%" align="center"><b>Author</b>&nbsp;
+</td>
+<td class="singleborder" colspan="3" align="center"><b>Findings</b></td>
+</tr>
+<tr bgcolor="#CCCCCC">
+<td class="singleborder right_separator" align="center"><span style="zoom:1;"></span></td>
+<td class="singleborder" align="center">suppressed</td>
+<td class="singleborder" align="center">total</td>
+<td class="singleborder" align="center">recommended</td>
+</tr>
+<tr class="alternating">
+<td class="singleborder right_separator" align="left">&nbsp;<a class="blue_link" href="#cs_dev1">LuanTa</a>&nbsp;
+</td>
+<td class="singleborder" align="center">&nbsp;0&nbsp;</td>
+<td class="singleborder" align="center">&nbsp;1&nbsp;</td>
+<td class="singleborder" align="center">&nbsp;1&nbsp;</td>
+</tr>
+</table><br><table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td xmlns:authors="authors" style="padding-left:20px;" colspan="2" align="left" nowrap class="tree"><a name="cs_dev1"></a><b>LuanTa</b>&nbsp;&nbsp;Total Findings
+:
+&nbsp;1
+</td>
+<td xmlns:authors="authors" align="right" class="tree"><a class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td colspan="3">
+<table xmlns:authors="authors" width="100%" class="header_separator" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" class="header_separator"></td>
+</tr>
+</table><br xmlns:authors="authors"></td>
+</tr>
+<tr>
+<td colspan="3" align="left">
+<table width="100%" bgcolor="#FFFFFF" class="doubleborder" cellpadding="0" cellspacing="0">
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="4" class="tree"><b>/strman/src/jtest/com/strman/Strman.java</b></td>
+</tr>
+<tr>
+<td width="1%" align="right" class="tree"></td>
+<td width="2%" align="right" class="tree"><font class="gray">1289:</font>&nbsp;
+</td>
+<td>"int" type cast to lower precision "char" type</td>
+<td style="padding-right:10px;" align="right" class="tree"><a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.NUM.CLP.html&#34;)">PB.NUM.CLP-2</a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="3"><br></td>
+</tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="40%"></td>
+<td width="20%" align="center">
+<div class="small_header">Findings by File</div>
+</td>
+<td align="right" width="40%"><a xmlns:authors="authors" class="gray_link" href="javascript:expandCSDetails()">Expand All</a>&nbsp;&nbsp;&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:collapseCSDetails()">Collapse All</a>&nbsp;&nbsp;&nbsp;<a xmlns:authors="authors" class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table xmlns:authors="authors" width="100%" class="header_separator" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" class="header_separator"></td>
+</tr>
+</table><br xmlns:authors="authors"></td>
+</tr>
+<tr>
+<td>
+<table width="100%" class="doubleborder" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left">
+<ul class="root" id="cs_foldinglist">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+			(0)            	                
+&nbsp;</b><b>Total (Suppressed)</b></li>
+<ul id="cs_foldinglist">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+			(0)            	                
+&nbsp;</b><b>strman</b></li>
+<ul id="cs_foldinglist">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+			(0)            	                
+&nbsp;</b><b>src</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+			(0)            	                
+&nbsp;</b><b>jtest</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+			(0)            	                
+&nbsp;</b><b>com</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+			(0)            	                
+&nbsp;</b><b>strman</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item" class="tree">&nbsp;&nbsp;&nbsp;<b>&nbsp;0
+			(0)            	                
+&nbsp;</b><b>Ascii.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="item" class="tree">&nbsp;&nbsp;&nbsp;<b>&nbsp;0
+			(0)            	                
+&nbsp;</b><b>HtmlEntities.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+			(0)            	                
+&nbsp;</b><b>Strman.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0">
+<tr valign="bottom">
+<td width="2%"></td>
+<td width="1%" align="right"></td>
+<td width="2%" align="right"><font class="gray">1289:&nbsp;</font></td>
+<td>"int" type cast to lower precision "char" type</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">LuanTa</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.NUM.CLP.html&#34;)">PB.NUM.CLP-2</a></td>
+</tr>
+</table>
+</li>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="25%"></td>
+<td align="center">
+<div class="small_header">Active Rules</div>
+</td>
+<td align="right" width="25%"><a xmlns:authors="authors" class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table xmlns:authors="authors" width="100%" class="header_separator" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" class="header_separator"></td>
+</tr>
+</table><br xmlns:authors="authors"></td>
+</tr>
+<tr>
+<td align="left">
+<table width="100%" cellpadding="0" cellspacing="0" class="doubleborder">
+<tr>
+<td>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[18/67]
+&nbsp;Flow Analysis</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.html&#34;)">(BD)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/3]
+&nbsp;API</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.API.html&#34;)">(BD.API)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make sure implementation of Object.equals(Object) properly handles null values&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.API.EQNULL.html&#34;)">(BD.API.EQNULL-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make sure implementation of Object.equals(Object) is reflexive&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.API.EQREFL.html&#34;)">(BD.API.EQREFL-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[8/21]
+&nbsp;Possible Bugs</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.PB.html&#34;)">(BD.PB)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid unvalidated input in array indexes&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.PB.ARRAYINP.html&#34;)">(BD.PB.ARRAYINP-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid use before explicit initialization&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.PB.NOTEXPLINIT.html&#34;)">(BD.PB.NOTEXPLINIT-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid use of fields before initialization in constructors and static initializers&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.PB.NOTINITCTOR.html&#34;)">(BD.PB.NOTINITCTOR-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid overwriting method parameters before each use&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.PB.POVR.html&#34;)">(BD.PB.POVR-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid division by zero&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.PB.ZERO.html&#34;)">(BD.PB.ZERO-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid accessing arrays out of bounds&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.PB.ARRAY.html&#34;)">(BD.PB.ARRAY-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid incorrect shift operations&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.PB.BADSHIFT.html&#34;)">(BD.PB.BADSHIFT-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid conditions that always evaluate to the same value&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.PB.CC.html&#34;)">(BD.PB.CC-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;Resources</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.RES.html&#34;)">(BD.RES)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use resources that have been freed&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.RES.FREE.html&#34;)">(BD.RES.FREE-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure resources are deallocated&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.RES.LEAKS.html&#34;)">(BD.RES.LEAKS-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[4/6]
+&nbsp;Threads &amp; Synchronization</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.TRS.html&#34;)">(BD.TRS)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid double locking&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.TRS.DLOCK.html&#34;)">(BD.TRS.DLOCK-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not abandon unreleased locks&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.TRS.LOCK.html&#34;)">(BD.TRS.LOCK-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not acquire locks in different order&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.TRS.ORDER.html&#34;)">(BD.TRS.ORDER-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use blocking methods while holding a lock&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.TRS.TSHL.html&#34;)">(BD.TRS.TSHL-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;Collections</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.CO.html&#34;)">(BD.CO)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not modify collection while iterating over it&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.CO.ITMOD.html&#34;)">(BD.CO.ITMOD-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;Exceptions</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.EXCEPT.html&#34;)">(BD.EXCEPT)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid NullPointerException&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BD.EXCEPT.NP.html&#34;)">(BD.EXCEPT.NP-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[2/5]
+&nbsp;JavaBeans</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BEAN.html&#34;)">(BEAN)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Use appropriate signatures for listener method names in JavaBean classes&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BEAN.BLNC.html&#34;)">(BEAN.BLNC-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure that JavaBean classes implement 'java.io.Serializable'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/BEAN.SERIALIZABLE.html&#34;)">(BEAN.SERIALIZABLE-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[2/6]
+&nbsp;Code Duplication Detection</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/CDD.html&#34;)">(CDD)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid method duplication&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/CDD.DUPM.html&#34;)">(CDD.DUPM-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid class duplication&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/CDD.DUPT.html&#34;)">(CDD.DUPT-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[8/108]
+&nbsp;Coding Conventions</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/CODSTA.html&#34;)">(CODSTA)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/12]
+&nbsp;Organization</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/CODSTA.ORG.html&#34;)">(CODSTA.ORG)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure all types have a non default package name&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/CODSTA.ORG.UNDPN.html&#34;)">(CODSTA.ORG.UNDPN-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[3/14]
+&nbsp;Error-Prone Coding</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/CODSTA.EPC.html&#34;)">(CODSTA.EPC)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Call 'super.clone()' in all 'clone()' methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/CODSTA.EPC.SCLONE.html&#34;)">(CODSTA.EPC.SCLONE-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use constructors in the 'clone()' method&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/CODSTA.EPC.CLNC.html&#34;)">(CODSTA.EPC.CLNC-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not call an "abstract" method from a constructor in an "abstract" class&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/CODSTA.EPC.NCAC.html&#34;)">(CODSTA.EPC.NCAC-4)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/39]
+&nbsp;Readability</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/CODSTA.READ.html&#34;)">(CODSTA.READ)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid nested assignments or assignments embedded in other expressions&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/CODSTA.READ.NEA.html&#34;)">(CODSTA.READ.NEA-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not declare multiple variables of different types in one statement&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/CODSTA.READ.VDT.html&#34;)">(CODSTA.READ.VDT-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/8]
+&nbsp;Overriding and Implementing Methods</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/CODSTA.OIM.html&#34;)">(CODSTA.OIM)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use the 'clone()' method only to implement 'Cloneable' interface&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/CODSTA.OIM.CLONE2.html&#34;)">(CODSTA.OIM.CLONE2-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure 'clone()' method of non-final Cloneable class declared to throw 'CloneNotSupportedException'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/CODSTA.OIM.CLONET.html&#34;)">(CODSTA.OIM.CLONET-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[20/62]
+&nbsp;Enterprise JavaBeans</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.html&#34;)">(EJB)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/19]
+&nbsp;Enterprise JavaBeans 3</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.EJB3.html&#34;)">(EJB.EJB3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Call 'InvocationContext.proceed()' from @AroundInvoke methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.EJB3.CPIM.html&#34;)">(EJB.EJB3.CPIM-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure instance variables of @Stateful beans are Serializable&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.EJB3.SIVS.html&#34;)">(EJB.EJB3.SIVS-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Declare bean classes "public"&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.CDP.html&#34;)">(EJB.CDP-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not declare bean classes as "abstract"&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.CNDA.html&#34;)">(EJB.CNDA-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not declare bean classes as "final"&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.CNDF.html&#34;)">(EJB.CNDF-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Declare 'ejbCreate()' methods  "public", but neither "static" nor "final"&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.CRTE.html&#34;)">(EJB.CRTE-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Implement a no-argument 'ejbCreate()' method for all Message-driven bean classes&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.MDBC.html&#34;)">(EJB.MDBC-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not define 'finalize()' method in bean classes&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.MNDF.html&#34;)">(EJB.MNDF-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Declare a "public" constructor that takes no parameters in bean classes&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.NFDC.html&#34;)">(EJB.NFDC-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Declare 'ejbPostCreate()' "public" and neither "static" nor "final"&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.PCRTE.html&#34;)">(EJB.PCRTE-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Make the return type "void" for SessionBeans or MessageDrivenBeans' 'ejbCreate()' methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.RTC.html&#34;)">(EJB.RTC-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Make the return type "void" for the 'ejbPostCreate()' method&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.RTP.html&#34;)">(EJB.RTP-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid passing the "this" reference as an argument&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.THISARG.html&#34;)">(EJB.THISARG-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not return "this"&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.THISRET.html&#34;)">(EJB.THISRET-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not access or modify security configuration objects&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.AMSC.html&#34;)">(EJB.AMSC-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Declare all "static" fields in EJB bean classes "final"&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.NFS.html&#34;)">(EJB.NFS-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;The return type of EJB finder methods should be the primary key or a collection of primary keys&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.RT.html&#34;)">(EJB.RT-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not set or create a new SecurityManager in EJBs&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.SMSN.html&#34;)">(EJB.SMSN-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid starting, stopping, or managing threads in any way in bean classes&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.THREAD.html&#34;)">(EJB.THREAD-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not throw 'java.rmi.RemoteException' in a bean's local interface and local home interface&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EJB.RILH.html&#34;)">(EJB.RILH-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[5/19]
+&nbsp;Exceptions</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EXCEPT.html&#34;)">(EXCEPT)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not throw exceptions from the constructors of exception classes&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EXCEPT.TEFEC.html&#34;)">(EXCEPT.TEFEC-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not abuse exceptions as flow control statements&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EXCEPT.AEFC.html&#34;)">(EXCEPT.AEFC-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use instanceof in a catch block to check the exception type&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EXCEPT.AIOC.html&#34;)">(EXCEPT.AIOC-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Always chain thrown exceptions&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EXCEPT.CTE.html&#34;)">(EXCEPT.CTE-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not throw exception types which are too general or are unchecked exceptions&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/EXCEPT.NTERR.html&#34;)">(EXCEPT.NTERR-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[5/12]
+&nbsp;Garbage Collection</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/GC.html&#34;)">(GC)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use 'finalize()' methods to unregister listeners&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/GC.FM.html&#34;)">(GC.FM-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not call 'finalize()' explicitly&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/GC.NCF.html&#34;)">(GC.NCF-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Prevent potential memory leaks in ObjectOutputStreams by calling 'reset()'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/GC.OSTM.html&#34;)">(GC.OSTM-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Call 'super.finalize()' from 'finalize()'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/GC.FCF.html&#34;)">(GC.FCF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Call 'super.finalize()' in the "finally" block of 'finalize()' methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/GC.IFF.html&#34;)">(GC.IFF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[1/13]
+&nbsp;Hibernate Framework</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/HIBERNATE.html&#34;)">(HIBERNATE)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid storing unencrypted Hibernate usernames and passwords in 'web.xml' files&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/HIBERNATE.UPWD.html&#34;)">(HIBERNATE.UPWD-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[5/14]
+&nbsp;Initialization</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/INIT.html&#34;)">(INIT)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid uninitialized reads of fields before or during constructor execution&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/INIT.UIRC.html&#34;)">(INIT.UIRC-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use a "static" initializer that creates an instance of the current class before all "static final" fields are assigned&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/INIT.SICUI.html&#34;)">(INIT.SICUI-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid explicitly initializing fields which have already been initialized by a superclass' constructor&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/INIT.ADI.html&#34;)">(INIT.ADI-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use initialization circularities for fields&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/INIT.IC.html&#34;)">(INIT.IC-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use non-final "static" fields during the initialization&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/INIT.NFS.html&#34;)">(INIT.NFS-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[2/10]
+&nbsp;Java Database Connectivity</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/JDBC.html&#34;)">(JDBC)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure index is valid in JDBC method invocation&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/JDBC.BRSA.html&#34;)">(JDBC.BRSA-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Close JDBC connections in "finally" blocks&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/JDBC.CDBC.html&#34;)">(JDBC.CDBC-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[2/49]
+&nbsp;Metric</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/METRIC.html&#34;)">(METRIC)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;McCabe Cyclomatic Complexity&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/METRIC.CC.html&#34;)">(METRIC.CC-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Nested Blocks Depth&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/METRIC.NBD.html&#34;)">(METRIC.NBD-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[5/38]
+&nbsp;Naming Conventions</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/NAMING.html&#34;)">(NAMING)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not declare types with the same name as types in the Java platform&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/NAMING.DJLO.html&#34;)">(NAMING.DJLO-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid using potential Java keywords as identifiers&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/NAMING.ID.html&#34;)">(NAMING.ID-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use a package name that is reserved by Sun&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/NAMING.RPKG.html&#34;)">(NAMING.RPKG-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid using dollar signs in names&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/NAMING.DSN.html&#34;)">(NAMING.DSN-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use variables with identical names or names that differ only in case&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/NAMING.UUVN.html&#34;)">(NAMING.UUVN-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[2/35]
+&nbsp;Object Oriented Programming</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/OOP.html&#34;)">(OOP)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not hide inherited fields&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/OOP.AHF.html&#34;)">(OOP.AHF-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not hide inherited "static" member methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/OOP.AHSM.html&#34;)">(OOP.AHSM-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[5/56]
+&nbsp;Optimization</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/OPT.html&#34;)">(OPT)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Close input and output resources in "finally" blocks&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/OPT.CIO.html&#34;)">(OPT.CIO-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use a "private" field that is accessed in only one method; change it to a local variable&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/OPT.CTLV.html&#34;)">(OPT.CTLV-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Declare "final" fields with a known compile time value as "static"&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/OPT.NSF.html&#34;)">(OPT.NSF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Declare member classes "static" if possible&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/OPT.SI.html&#34;)">(OPT.SI-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid unnecessary casting&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/OPT.UNC.html&#34;)">(OPT.UNC-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[61/140]
+&nbsp;Possible Bugs</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.html&#34;)">(PB)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[5/12]
+&nbsp;Typographical Errors</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.TYPO.html&#34;)">(PB.TYPO)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid assignment within a condition&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.TYPO.ASI.html&#34;)">(PB.TYPO.ASI-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure that arguments passed to Java wrapper classes do not contain typos&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.TYPO.WT.html&#34;)">(PB.TYPO.WT-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure "switch" statements do not contain typos&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.TYPO.TLS.html&#34;)">(PB.TYPO.TLS-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid assigning same variable in the fall-through switch case&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.TYPO.DAV.html&#34;)">(PB.TYPO.DAV-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not give methods and fields the same name as the enclosing class or each other&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.TYPO.NAMING.html&#34;)">(PB.TYPO.NAMING-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[6/12]
+&nbsp;Useless Code</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.USC.html&#34;)">(PB.USC)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid unreachable "else if" and "else" cases&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.USC.UIF.html&#34;)">(PB.USC.UIF-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid using "private" fields which are never given a meaningful value&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.USC.FCBS.html&#34;)">(PB.USC.FCBS-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid increment and decrement statements which have no effect&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.USC.OI.html&#34;)">(PB.USC.OI-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use the unary operator '+'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.USC.UNARY.html&#34;)">(PB.USC.UNARY-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid empty statements&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.USC.AES.html&#34;)">(PB.USC.AES-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid self assignments/initializations to fields and/or local variables&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.USC.SAFL.html&#34;)">(PB.USC.SAFL-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[10/16]
+&nbsp;Numerical Errors</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.NUM.html&#34;)">(PB.NUM)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid calculations which result in overflow or NaN&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.NUM.ICO.html&#34;)">(PB.NUM.ICO-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not assign the result of an integer division to a floating point variable&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.NUM.IDCD.html&#34;)">(PB.NUM.IDCD-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid comparisons to Double.NaN or Float.NaN&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.NUM.NAN.html&#34;)">(PB.NUM.NAN-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not initialize array dimensions with negative numbers&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.NUM.NIA.html&#34;)">(PB.NUM.NIA-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not pass floating point values to the 'BigDecimal' constructor&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.NUM.BBDCC.html&#34;)">(PB.NUM.BBDCC-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use an integer outside the range of [0, 31] as the amount of a shift&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.NUM.BSA.html&#34;)">(PB.NUM.BSA-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not cast primitive data types to lower precision&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.NUM.CLP.html&#34;)">(PB.NUM.CLP-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not compare floating point types&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.NUM.DCF.html&#34;)">(PB.NUM.DCF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use floating point variables as loop indices&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.NUM.FPLI.html&#34;)">(PB.NUM.FPLI-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid casting the result of an integer multiplication to "long"&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.NUM.IMOF.html&#34;)">(PB.NUM.IMOF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[12/25]
+&nbsp;API Usage and Implementation</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.API.html&#34;)">(PB.API)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not call the 'next' method from the 'hasNext' method of an Iterator&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.API.HNCN.html&#34;)">(PB.API.HNCN-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use "URL" objects in "Collections" or "Maps"&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.API.IUMS.html&#34;)">(PB.API.IUMS-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not call 'setSize()' in 'ComponentListener.componentResized()'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.API.DNCSS.html&#34;)">(PB.API.DNCSS-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not create an empty JarFile entry or an empty ZipFile entry&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.API.EJF.html&#34;)">(PB.API.EJF-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid calling 'equals(null)'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.API.EQNL.html&#34;)">(PB.API.EQNL-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure that all types which are used as keys in Sets and Maps override the 'equals()' and 'hashCode()' methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.API.KOEH.html&#34;)">(PB.API.KOEH-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not overload the 'finalize()' method&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.API.OF.html&#34;)">(PB.API.OF-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid using "." as a regular expression in 'String.replaceAll()' and 'String.replaceFirst()'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.API.REP.html&#34;)">(PB.API.REP-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not pass a 'char' to the 'StringBuffer(int)' constructor&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.API.SBCC.html&#34;)">(PB.API.SBCC-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid improper casting of the results of the 'next' methods in the 'java.util.Random' class&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.API.UNI.html&#34;)">(PB.API.UNI-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid using the 'equals()' and 'hashCode()' methods of "java.net.URL"&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.API.URL.html&#34;)">(PB.API.URL-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Update values which may be using to compare with vendor properties&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.API.VENDOR.html&#34;)">(PB.API.VENDOR-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[7/18]
+&nbsp;Logical Errors</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.LOGIC.html&#34;)">(PB.LOGIC)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not call 'equals()' methods that always return false&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.LOGIC.EQUS.html&#34;)">(PB.LOGIC.EQUS-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid calling 'equals()' with same object&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.LOGIC.ESO.html&#34;)">(PB.LOGIC.ESO-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid infinite recursive method calls&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.LOGIC.FLRC.html&#34;)">(PB.LOGIC.FLRC-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not increment or decrement on the same variable over multiple nested "for" loop statements&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.LOGIC.JI.html&#34;)">(PB.LOGIC.JI-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure that the objects used within a loop's condition are properly accessed within the loop's body&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.LOGIC.OAMC.html&#34;)">(PB.LOGIC.OAMC-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid bugs in the usage of loop variables&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.LOGIC.INDEX.html&#34;)">(PB.LOGIC.INDEX-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid out of range comparisons&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.LOGIC.OOR.html&#34;)">(PB.LOGIC.OOR-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[11/32]
+&nbsp;Confusing or Unintended Behavior</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.CUB.html&#34;)">(PB.CUB)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid using 'return's inside 'finally blocks if thare are other 'return's inside the try-catch block&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.CUB.ARCF.html&#34;)">(PB.CUB.ARCF-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not exit "finally" blocks abruptly&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.CUB.ATSF.html&#34;)">(PB.CUB.ATSF-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use the "+" string concatenation operator to concatenate numbers; use it only to add numbers&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.CUB.DCP.html&#34;)">(PB.CUB.DCP-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid erroneously placing statements outside blocks&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.CUB.EBI.html&#34;)">(PB.CUB.EBI-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid overloading varargs methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.CUB.OVAM.html&#34;)">(PB.CUB.OVAM-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use "char" arrays in "String" concatenations&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.CUB.SAC.html&#34;)">(PB.CUB.SAC-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use '==' or '!=' to compare objects&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.CUB.UEIC.html&#34;)">(PB.CUB.UEIC-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid dangling "else" statements&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.CUB.ADE.html&#34;)">(PB.CUB.ADE-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid confusing assignments to constructor arguments&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.CUB.AWP.html&#34;)">(PB.CUB.AWP-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid improper concatenation of characters with numbers&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.CUB.CNVC.html&#34;)">(PB.CUB.CNVC-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use the method name 'main()' only for the entry point method&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.CUB.MAIN.html&#34;)">(PB.CUB.MAIN-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[7/17]
+&nbsp;Runtime Exceptions</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.RE.html&#34;)">(PB.RE)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not add a collection to itself&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.RE.ACTI.html&#34;)">(PB.RE.ACTI-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check whether or not "readLine()" returned null before dereferencing the return value&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.RE.IDRL.html&#34;)">(PB.RE.IDRL-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid using methods add() from JLayer class&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.RE.JLAY.html&#34;)">(PB.RE.JLAY-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When used HttpURLConnection always check return value from the getResponseCode() methods before call getInputStream()&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.RE.RCODE.html&#34;)">(PB.RE.RCODE-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid modifying fixed-size Collections&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.RE.AMFSL.html&#34;)">(PB.RE.AMFSL-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid possible ArrayStoreExceptions&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.RE.ASE.html&#34;)">(PB.RE.ASE-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure 'Iterator.next()' method implementations throw 'NoSuchElementException'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.RE.CTNSE.html&#34;)">(PB.RE.CTNSE-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure that exactly one type has the same name as the file name&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.OCSF.html&#34;)">(PB.OCSF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Place "default" as the last case of the "switch" statement&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.PDCL.html&#34;)">(PB.PDCL-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Provide "default:" for each "switch" statement&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PB.PDS.html&#34;)">(PB.PDS-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[10/17]
+&nbsp;Property Files</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PROPS.html&#34;)">(PROPS)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid duplicated property names&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PROPS.DUPN.html&#34;)">(PROPS.DUPN-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid empty property names&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PROPS.EMN.html&#34;)">(PROPS.EMN-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid misusing arguments in property values&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PROPS.IARG.html&#34;)">(PROPS.IARG-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid incomplete property entries&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PROPS.ICK.html&#34;)">(PROPS.ICK-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid unmatched property entries in resources with different locales&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PROPS.MENTRY.html&#34;)">(PROPS.MENTRY-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid duplicated property values&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PROPS.DUPV.html&#34;)">(PROPS.DUPV-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid empty property values&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PROPS.EMV.html&#34;)">(PROPS.EMV-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Follow the limit for number of property entries&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PROPS.FM.html&#34;)">(PROPS.FM-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid misusing the line continuation character '\'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PROPS.IVCC.html&#34;)">(PROPS.IVCC-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure that property entries are localized correctly&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/PROPS.TENTRY.html&#34;)">(PROPS.TENTRY-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[8/17]
+&nbsp;Serialization</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/SERIAL.html&#34;)">(SERIAL)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid classes that implement 'Externalizable' but do not define a no-argument constructor&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/SERIAL.ENNAC.html&#34;)">(SERIAL.ENNAC-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure the return type of 'readResolve()' and 'writeReplace()' methods are 'java.lang.Object'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/SERIAL.MRWD.html&#34;)">(SERIAL.MRWD-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure outer class is serializable if its inner class is serializable&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/SERIAL.OC.html&#34;)">(SERIAL.OC-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure that the 'readObject()' and 'writeObject()' methods have the correct signature&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/SERIAL.ROWO.html&#34;)">(SERIAL.ROWO-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid serializable classes that extend a superclass without a zero-argument constructor&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/SERIAL.SNNAC.html&#34;)">(SERIAL.SNNAC-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure Serializable classes are correct&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/SERIAL.NSFSC.html&#34;)">(SERIAL.NSFSC-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Declare 'serialPersistentFields' "private static final"&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/SERIAL.SPF.html&#34;)">(SERIAL.SPF-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure that all fields are assigned by the 'readObject()' method and written by the 'writeObject()' method&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/SERIAL.RWAF.html&#34;)">(SERIAL.RWAF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[1/17]
+&nbsp;Servlets</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/SERVLET.html&#34;)">(SERVLET)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure that all servlets have a corresponding mapping in 'web.xml' files&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/SERVLET.SCM.html&#34;)">(SERVLET.SCM-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[1/11]
+&nbsp;Spring Framework</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/SPRING.html&#34;)">(SPRING)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Follow configuration class conventions&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/SPRING.ATCFG.html&#34;)">(SPRING.ATCFG-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[5/30]
+&nbsp;Struts Framework</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/STRUTS.html&#34;)">(STRUTS)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid accessing a database from Action Classes&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/STRUTS.ACDA.html&#34;)">(STRUTS.ACDA-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid defining multiple form beans with the same name in 'struts-config.xml' files&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/STRUTS.MFBSN.html&#34;)">(STRUTS.MFBSN-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Use the 'minlength' validator for password fields in 'validation.xml'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/STRUTS.MLVP.html&#34;)">(STRUTS.MLVP-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure that the @path attribute of '&lt;action&gt;' and '&lt;forward&gt;' elements begins with '/' in 'struts-config.xml' files&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/STRUTS.PFS.html&#34;)">(STRUTS.PFS-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure that the 'scope' attribute is set to either "request" or "session" for actions and exceptions in 'struts-config.xml'
+files&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/STRUTS.RSS.html&#34;)">(STRUTS.RSS-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[15/52]
+&nbsp;Threads &amp; Synchronization</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/TRS.html&#34;)">(TRS)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not cause deadlocks by calling a "synchronized" method from a "synchronized" method&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/TRS.CSFS.html&#34;)">(TRS.CSFS-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Release Locks in a "finally" block&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/TRS.RLF.html&#34;)">(TRS.RLF-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not synchronize on constant Strings&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/TRS.SCS.html&#34;)">(TRS.SCS-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Manually synchronize on 'synchronized' collections when iterating over them&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/TRS.SSCI.html&#34;)">(TRS.SSCI-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Call 'wait()' and 'await()' only inside a loop that tests the liveness condition&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/TRS.UWIL.html&#34;)">(TRS.UWIL-1)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use variables of the unsafe type 'java.lang.ThreadGroup'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/TRS.AUTG.html&#34;)">(TRS.AUTG-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not call the "start" method of threads from inside a constructor&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/TRS.CSTART.html&#34;)">(TRS.CSTART-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not synchronize on "public" fields since doing so may cause deadlocks&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/TRS.SOPF.html&#34;)">(TRS.SOPF-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid calling unsafe deprecated methods of 'Thread' and 'Runtime'&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/TRS.THRD.html&#34;)">(TRS.THRD-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not call 'Thread.sleep()' while holding a lock since doing so can cause poor performance and deadlocks&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/TRS.TSHL.html&#34;)">(TRS.TSHL-2)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure 'wait()', 'notify()' and 'notifyAll()' are invoked on an object that is clearly synchronized in its enclosing method
+scope&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/TRS.NSYN.html&#34;)">(TRS.NSYN-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not synchronize on non-"final" fields since doing so makes it difficult to guarantee mutual exclusion&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/TRS.SOUF.html&#34;)">(TRS.SOUF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Synchronize access to "static" SimpleDataFormats&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/TRS.SSDF.html&#34;)">(TRS.SSDF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not start a thread without specifying a 'run()' method&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/TRS.UT.html&#34;)">(TRS.UT-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Use 'wait()' and 'notifyAll()' instead of polling loops&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/TRS.UWNA.html&#34;)">(TRS.UWNA-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[11/28]
+&nbsp;Unused Code</b>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/UC.html&#34;)">(UC)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid empty static and non-static initializers&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/UC.AESTAT.html&#34;)">(UC.AESTAT-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid unused labels&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/UC.AUL.html&#34;)">(UC.AUL-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid collection objects that are never read&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/UC.AURCO.html&#34;)">(UC.AURCO-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid local variables that are never read&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/UC.AURV.html&#34;)">(UC.AURV-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid duplicate code in 'if' branches&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/UC.DIEB.html&#34;)">(UC.DIEB-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not explicitly "import" the java.lang.* "package"&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/UC.DIL.html&#34;)">(UC.DIL-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid empty 'finalize()' methods&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/UC.EF.html&#34;)">(UC.EF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid empty "synchronized" statements&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/UC.SNE.html&#34;)">(UC.SNE-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid unnecessary 'if' statements&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/UC.UCIF.html&#34;)">(UC.UCIF-3)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid redundant throw clauses&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/UC.ARTD.html&#34;)">(UC.ARTD-4)</a>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not import classes from the package that contains the current class&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;file:/C:/DATA/JAVA/JUNIT/jtest/rules/doc/UC.PIMPORT.html&#34;)">(UC.PIMPORT-4)</a>&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><a name="met"></a><table width="100%" border="0" bordercolor="#CBCBCB" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="40%"></td>
+<td align="center" width="15%">
+<div class="small_header">Metrics Summary</div>
+</td>
+<td align="right" width="40%">&nbsp;&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:expandMetricsDetails()">Expand All</a>&nbsp;&nbsp;&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:collapseMetricsDetails()">Collapse All</a>&nbsp;&nbsp;&nbsp;<a xmlns:authors="authors" class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" bordercolor="#CBCBCB" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table class="singleborder" width="100%" cellpadding="0" cellspacing="0">
+<tr bgcolor="#CCCCCC" bordercolor="#CBCBCB" class="details" cellspacing="0">
+<td class="singleborder" align="center" width="40%">Metric name</td>
+<td class="singleborder" align="center" width="12%">Number of items</td>
+<td class="singleborder" align="center" width="12%">Average</td>
+<td class="singleborder" align="center" width="12%">Std. Deviation</td>
+<td class="singleborder" align="center" width="12%">Maximum</td>
+<td class="singleborder" align="center" width="12%">Minimum</td>
+</tr>
+<tr>
+<td class="singleborder" style="padding-left:5px; padding-right:5px" colspan="6" width="100%">
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>McCabe Cyclomatic Complexity</b>&nbsp;<font class="gray">(METRIC.CC)</font></td>
+<td align="center" width="12%"><b>106</b></td>
+<td align="center" width="12%"><b>1.698</b></td>
+<td align="center" width="12%"><b>1.029</b></td>
+<td align="center" width="12%"><b>5</b></td>
+<td align="center" width="12%"><b>1</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strman</td>
+<td align="center" width="12%">106</td>
+<td align="center" width="12%">1.698</td>
+<td align="center" width="12%">1.029</td>
+<td align="center" width="12%">5</td>
+<td align="center" width="12%">1</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Nested Blocks Depth</b>&nbsp;<font class="gray">(METRIC.NBD)</font></td>
+<td align="center" width="12%"><b>106</b></td>
+<td align="center" width="12%"><b>0.453</b></td>
+<td align="center" width="12%"><b>0.616</b></td>
+<td align="center" width="12%"><b>2</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strman</td>
+<td align="center" width="12%">106</td>
+<td align="center" width="12%">0.453</td>
+<td align="center" width="12%">0.616</td>
+<td align="center" width="12%">2</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Physical Lines in Files</b>&nbsp;<font class="gray">(METRIC.NOPLIF)</font></td>
+<td align="center" width="12%"><b>3</b></td>
+<td align="center" width="12%"><b>1806.333</b></td>
+<td align="center" width="12%"><b>1485.902</b></td>
+<td align="center" width="12%"><b>3768</b></td>
+<td align="center" width="12%"><b>173</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strman</td>
+<td align="center" width="12%">3</td>
+<td align="center" width="12%">1806.333</td>
+<td align="center" width="12%">1485.902</td>
+<td align="center" width="12%">3768</td>
+<td align="center" width="12%">173</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Source Lines in Methods</b>&nbsp;<font class="gray">(METRIC.NOSLIM)</font></td>
+<td align="center" width="12%"><b>106</b></td>
+<td align="center" width="12%"><b>6</b></td>
+<td align="center" width="12%"><b>3.569</b></td>
+<td align="center" width="12%"><b>21</b></td>
+<td align="center" width="12%"><b>2</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strman</td>
+<td align="center" width="12%">106</td>
+<td align="center" width="12%">6</td>
+<td align="center" width="12%">3.569</td>
+<td align="center" width="12%">21</td>
+<td align="center" width="12%">2</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+</ul>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table><br></div><br><a name="berr"></a><table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="25%"></td>
+<td align="center">
+<div class="small_header">Setup Problems</div>
+</td>
+<td align="right" width="25%" valign="bottom"><a xmlns:textutil="textutil" xmlns:authors="authors" class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table><br><table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" class="header_separator" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" class="header_separator"></td>
+</tr>
+</table><br xmlns:textutil="textutil" xmlns:authors="authors"><table width="100%" cellpadding="0" cellspacing="0" class="doubleborder" border="0" bordercolor="#CBCBCB">
+<tr>
+<td align="left" style="padding-left:10px" class="tree"><b>
+[WARNING]
+&nbsp;The "Flow Analysis" feature is not licensed. The reported results may be incomplete. The following rules that are specified
+in your test configuration were not executed:</b></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;padding-bottom:5px" class="tree">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><pre class="tree" style="margin:5px 5px 3px 5px;white-space:pre-wrap;">BD.API.EQNULL, BD.API.EQREFL, BD.CO.ITMOD, BD.EXCEPT.NP, BD.PB.ARRAY, BD.PB.ARRAYINP, BD.PB.BADSHIFT, BD.PB.CC, BD.PB.NOTEXPLINIT, BD.PB.NOTINITCTOR, BD.PB.POVR, BD.PB.ZERO, BD.RES.FREE, BD.RES.LEAKS, BD.TRS.DLOCK, BD.TRS.LOCK, BD.TRS.ORDER, BD.TRS.TSHL</pre></td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><br></td>
+</tr>
+</table><script language="JavaScript">
+    if(document.getElementById("cs_link_cat") != null) {
+       document.getElementById("cs_link_cat").className="gray_red_link";
+    }
+    if(document.getElementById("cs_link_cattrue") != null) {
+       document.getElementById("cs_link_cattrue").className="gray_red_link";
+    }
+    </script></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
